@@ -89,7 +89,7 @@ display(Image(filename=os.path.join(folder_path, image_file)))
 
 
 🏗️ Model Building: VGG16 with Transfer Learning
---
+---
 from tensorflow.keras.applications import VGG16
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Flatten, Dropout
@@ -112,10 +112,10 @@ model = Sequential([
 model.compile(optimizer=Adam(learning_rate=0.0001),
               loss='categorical_crossentropy',
               metrics=['accuracy'])
---
+---
 
 📊 Training and Evaluation
---
+---
 train_gen = ImageDataGenerator(rescale=1./255, validation_split=0.2)
 
 train_data = train_gen.flow_from_directory(
@@ -139,9 +139,9 @@ history = model.fit(train_data, validation_data=val_data, epochs=10)
 
 # Save model
 model.save("model/vgg16_waste.h5")
---
+---
 🌐 Flask Web Application
---
+---
 from flask import Flask, render_template, request
 import tensorflow as tf
 from tensorflow.keras.preprocessing import image
