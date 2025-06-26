@@ -86,8 +86,8 @@ from IPython.display import Image, display
 folder_path = "dataset/biodegradable"
 image_file = random.choice(os.listdir(folder_path))
 display(Image(filename=os.path.join(folder_path, image_file)))
-
-
+```
+```python
 🏗️ Model Building: VGG16 with Transfer Learning
 ---
 from tensorflow.keras.applications import VGG16
