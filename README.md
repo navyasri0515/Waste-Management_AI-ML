@@ -144,7 +144,7 @@ history = model.fit(train_data, validation_data=val_data, epochs=10)
 ```python
 model.save("model/vgg16_waste.h5")
 ```
-🌐 Flask Web Application
+# 🌐 Flask Web Application
 ```python
 from flask import Flask, render_template, request
 import tensorflow as tf
@@ -178,7 +178,7 @@ def index():
 if __name__ == "__main__":
     app.run(debug=True)
 ```
-#templates/index.html
+# templates/index.html
 ```
 <!DOCTYPE html>
 <html>
@@ -199,7 +199,7 @@ if __name__ == "__main__":
 </body>
 </html>
 ```
-✅ Final Output
+# ✅ Final Output
 The app allows users to upload any waste image and provides a prediction like:
 
 Prediction: recyclable
@@ -215,7 +215,7 @@ Model was trained over 10 epochs
 
 Data was balanced across classes
 
-💾 Requirements
+# 💾 Requirements
 
 tensorflow
 flask
@@ -230,7 +230,7 @@ pip install -r requirements.txt
 Clone the repository:
 
 
-git clone https://github.com/yourusername/waste-classification-flask.git
+git clone https://github.com/navyasri0515/waste-classification-flask.git
 cd waste-classification-flask
 Place the dataset in the dataset/ folder.
 
@@ -246,20 +246,15 @@ Open browser and go to http://127.0.0.1:5000/.
 This project demonstrates my ability to build an end-to-end deep learning pipeline — from data preprocessing and model training to deploying a working web application using Flask. Transfer learning with VGG16 enabled efficient training, and the deployed model provides real-time predictions with high accuracy.
 
 📧 Contact
-Name: =navyasri]
+Name: =NAVYA SRI
 
-Email: [navyasrichillapalli@gmail.com]
+Email: navyasrichillapalli@gmail.com
 
-GitHub: [github.com/navyasri0515]
+GitHub: github.com/navyasri0515
 
 
 
 ---
 
-Let me know if you'd like:
-- A `.zip` version of the code and folders.
-- The `train_model.py` script separated.
-- Styling or enhancements to the HTML UI.
-- Help pushing this to GitHub.
 
-Would you like the entire code folder as a downloadable archive?
+
