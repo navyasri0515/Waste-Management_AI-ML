@@ -87,27 +87,29 @@ folder_path = "dataset/biodegradable"
 image_file = random.choice(os.listdir(folder_path))
 display(Image(filename=os.path.join(folder_path, image_file)))
 ```
-```python
+
 🏗️ Model Building: VGG16 with Transfer Learning
----
+```python
 from tensorflow.keras.applications import VGG16
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Flatten, Dropout
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.optimizers import Adam
-
+```
 # Load pre-trained VGG16
+```python
 vgg = VGG16(include_top=False, input_shape=(224, 224, 3), weights='imagenet')
 vgg.trainable = False
-
+```
 # Define the model
+```python
 model = Sequential([
     vgg,
     Flatten(),
     Dropout(0.5),
     Dense(3, activation='softmax')  # 3 classes
 ])
-
+```
 # Compile the model
 model.compile(optimizer=Adam(learning_rate=0.0001),
               loss='categorical_crossentropy',
@@ -115,7 +117,7 @@ model.compile(optimizer=Adam(learning_rate=0.0001),
 ---
 
 📊 Training and Evaluation
----
+```python
 train_gen = ImageDataGenerator(rescale=1./255, validation_split=0.2)
 
 train_data = train_gen.flow_from_directory(
@@ -133,15 +135,15 @@ val_data = train_gen.flow_from_directory(
     class_mode='categorical',
     subset='validation'
 )
-
+```
 # Train
+```python
 history = model.fit(train_data, validation_data=val_data, epochs=10)
 
 # Save model
 model.save("model/vgg16_waste.h5")
----
 🌐 Flask Web Application
----
+```python
 from flask import Flask, render_template, request
 import tensorflow as tf
 from tensorflow.keras.preprocessing import image
@@ -173,8 +175,8 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True)
---
-templates/index.html
+```
+#templates/index.html
 --
 <!DOCTYPE html>
 <html>
