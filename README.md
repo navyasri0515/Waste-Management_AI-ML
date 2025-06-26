@@ -139,9 +139,11 @@ val_data = train_gen.flow_from_directory(
 # Train
 ```python
 history = model.fit(train_data, validation_data=val_data, epochs=10)
-
+```
 # Save model
+```python
 model.save("model/vgg16_waste.h5")
+```
 🌐 Flask Web Application
 ```python
 from flask import Flask, render_template, request
@@ -177,7 +179,7 @@ if __name__ == "__main__":
     app.run(debug=True)
 ```
 #templates/index.html
---
+```
 <!DOCTYPE html>
 <html>
 <head>
@@ -196,7 +198,7 @@ if __name__ == "__main__":
     {% endif %}
 </body>
 </html>
---
+```
 ✅ Final Output
 The app allows users to upload any waste image and provides a prediction like:
 
@@ -214,40 +216,29 @@ Model was trained over 10 epochs
 Data was balanced across classes
 
 💾 Requirements
-text
-Copy
-Edit
+
 tensorflow
 flask
 numpy
 pillow
 Install with:
 
-bash
-Copy
-Edit
+
+
 pip install -r requirements.txt
 🚀 How to Run the Project
 Clone the repository:
 
-bash
-Copy
-Edit
+
 git clone https://github.com/yourusername/waste-classification-flask.git
 cd waste-classification-flask
 Place the dataset in the dataset/ folder.
 
 Train the model:
 
-bash
-Copy
-Edit
 python train_model.py
 Run the Flask app:
 
-bash
-Copy
-Edit
 python app.py
 Open browser and go to http://127.0.0.1:5000/.
 
@@ -255,15 +246,13 @@ Open browser and go to http://127.0.0.1:5000/.
 This project demonstrates my ability to build an end-to-end deep learning pipeline — from data preprocessing and model training to deploying a working web application using Flask. Transfer learning with VGG16 enabled efficient training, and the deployed model provides real-time predictions with high accuracy.
 
 📧 Contact
-Name: [Your Full Name]
+Name: =navyasri]
 
-Email: [your.email@example.com]
+Email: [navyasrichillapalli@gmail.com]
 
-GitHub: [github.com/yourusername]
+GitHub: [github.com/navyasri0515]
 
-yaml
-Copy
-Edit
+
 
 ---
 
